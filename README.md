@@ -70,6 +70,15 @@ Chạy test bằng Hardhat:
 npx hardhat test
 ```
 
+## Mở giao diện GUI
+
+Chạy lệnh sau để mở được lệnh GUI
+
+```bash
+cd frontend
+python3 -m http.server
+```
+
 ## Tham khảo hợp đồng
 
 Hợp đồng `Voting.sol` cung cấp các chức năng:
