@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20; // Khuyến nghị dùng bản 0.8.x[cite: 1]
+pragma solidity ^0.8.20;
 
 contract Voting {
     address public owner;
