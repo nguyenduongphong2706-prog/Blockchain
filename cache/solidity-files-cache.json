@@ -1,8 +1,8 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/workspaces/vox-gov-project/contracts/Voting.sol": {
-      "lastModificationDate": 1777565042142,
+    "/workspaces/Blockchain/contracts/Voting.sol": {
+      "lastModificationDate": 1777570163177,
       "contentHash": "4620422a661d9eb65747ea66437a8ec9",
       "sourceName": "contracts/Voting.sol",
       "solcConfig": {
