@@ -58,7 +58,6 @@ npx hardhat run scripts/deploy.js --network localhost
 ## Lưu ý quan trọng
 
 - Giao diện hiện tại chỉ cập nhật số liệu sau khi thực hiện vote thành công.
-- Dự án đã loại bỏ cơ chế tự động tăng số liệu ngẫu nhiên.
 - Mỗi địa chỉ whitelist chỉ có thể bỏ phiếu một lần.
 - Nếu muốn sử dụng giao diện thật, hãy đảm bảo giá trị của `CONTRACT_ADDRESS` đúng với hợp đồng deploy.
 

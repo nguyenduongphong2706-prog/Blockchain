@@ -52,7 +52,7 @@ contract Voting {
         require(isWhitelisted[msg.sender], "Ban chua duoc cap quyen bo phieu");
         
         
-        require(!hasVoted[msg.sender], "Ban da bo phieu roi");
+        require(!hasVoted[msg.sender], "Vote that bai do khong duoc double-vote");
         
         
         require(_candidateId >= 0 && _candidateId < candidatesCount, "ID mon hoc khong hop le");
