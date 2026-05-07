@@ -50,7 +50,7 @@ describe("Voting Contract", function () {
   it("Tu choi bo phieu hai lan tu cung mot tai khoan", async function () {
     await voting.addToWhitelist(addr1.address);
     await voting.connect(addr1).vote(1);
-    await expect(voting.connect(addr1).vote(1)).to.be.revertedWith("Ban da bo phieu roi");
+    await expect(voting.connect(addr1).vote(1)).to.be.revertedWith("Vote that bai do khong duoc double-vote");
   });
 
   // 6. Kiểm tra event votedEvent được phát ra đúng với candidateId[cite: 1]

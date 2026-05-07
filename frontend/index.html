@@ -244,13 +244,13 @@ const fetchContractData = async (currentAccount) => {
     }
 
     try {
-        console.log('📡 Creating provider and contract...');
+        console.log('Creating provider and contract...');
         const provider = new ethers.BrowserProvider(window.ethereum);
         const contract = getVotingContract(provider);
 
-        console.log('👑 Fetching owner address...');
+        console.log('Fetching owner address...');
         const ownerAddress = await contract.owner();
-        console.log('👑 Owner address:', ownerAddress);
+        console.log('Owner address:', ownerAddress);
         setContractOwner(ownerAddress);
 
         if (currentAccount) {
@@ -264,7 +264,7 @@ const fetchContractData = async (currentAccount) => {
             setContractWhitelisted(whitelisted);
             setHasVoted(voted);
             const isOwnerCheck = currentAccount.toLowerCase() === ownerAddress.toLowerCase();
-            console.log('👑 Is owner check:', currentAccount.toLowerCase(), '===', ownerAddress.toLowerCase(), '=', isOwnerCheck);
+            console.log('Is owner check:', currentAccount.toLowerCase(), '===', ownerAddress.toLowerCase(), '=', isOwnerCheck);
             setIsOwner(isOwnerCheck);
         }
 
@@ -286,10 +286,10 @@ const fetchContractData = async (currentAccount) => {
             })));
         }
 
-        console.log('✅ fetchContractData completed successfully');
+        console.log('fetchContractData completed successfully');
         return true;
     } catch (error) {
-        console.error('❌ Lỗi khi đọc dữ liệu contract:', error);
+        console.error('Lỗi khi đọc dữ liệu contract:', error);
         return false;
     }
 };
@@ -297,10 +297,10 @@ const fetchContractData = async (currentAccount) => {
 const connectWallet = async () => {
     if (typeof window.ethereum !== 'undefined') {
         try {
-            console.log('🔗 Đang kết nối ví...');
+            console.log('Đang kết nối ví...');
             const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
             const selected = accounts[0];
-            console.log('✅ Đã kết nối account:', selected);
+            console.log('Đã kết nối account:', selected);
 
             setAccount(selected);
             setHasVoted(false);
@@ -336,9 +336,9 @@ const connectWallet = async () => {
             if (!window.ethereum) return;
             
             const handleAccountsChanged = async (accounts) => {
-                console.log('🔄 Account thay đổi:', accounts);
+                console.log('Account thay đổi:', accounts);
                 if (accounts.length === 0) {
-                    console.log('❌ Ngắt kết nối');
+                    console.log('Ngắt kết nối');
                     disconnect();
                 } else {
                     const newAccount = accounts[0];
